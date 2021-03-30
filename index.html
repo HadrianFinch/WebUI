@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./index.js"></script>
+        <!-- <link rel="stylesheet" 
+        href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    </head>
+
+    <body onload="onLoad()">
+        <h1 id="title">
+            Welcome To Hadrian's online server
+        </h1>
+        <h3>
+            type 'help' for more info
+        </h3>
+        <p>
+            start typing to activate the terminal
+        </p>
+
+        <div id="console">
+            <!-- stuff will go here later -->
+        </div>
+       
+        <p class="inputbar">H:/Home> 
+            <span role="textbox" class="input" id="CMDinput" 
+                placeholder="type your command here"
+                spellcheck="false" autofocus contenteditable>
+                
+            </span>
+
+            <button class="okBtn" id="btn" 
+            onclick="inputgo()">GO</button>
+        </p>
+    </body>
+</html>

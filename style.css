@@ -1,0 +1,396 @@
+body
+{
+    background-color: black;
+    font-family: Consolas;
+    font-size: 16 !important;
+    color: #15ab0d;
+}
+.centered {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    /* bring your own prefixes */
+    /* transform: translate(-500px, -500px); */
+  }
+#CMDinput
+{
+    width: auto;
+    /* width: 100%; */
+    border: none;
+    background-color: black;
+    color: #15ab0d;
+    font-family: Consolas;
+    font-size: 16;
+    outline: 0px solid transparent;
+}
+.noverflow
+{
+    overflow: hidden;
+}
+.okBtn
+{
+    width: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(49, 49, 49);
+    color: #15ab0d;
+    font-family: Consolas;
+    font-size: 16;
+    display: none;
+}
+.input
+{
+    min-width: 20px;
+}
+#console
+{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border: none;
+    
+    font-family: Consolas;
+    font-size: 16 !important;
+    color: #15ab0d;
+}
+
+.animateColorRotate
+{
+    position: relative;
+    animation-name: colorRotate;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorRotate 
+{
+    0%   
+    {
+        background-color:red; 
+        transform: rotate(0deg);
+    }
+    25%  
+    {
+        background-color:yellow; 
+        transform: rotate(90deg);
+    }
+    50%  
+    {
+        background-color:blue; 
+        transform: rotate(180deg);
+    }
+    75%  
+    {
+        background-color:green; 
+        transform: rotate(270deg);
+    }
+    100% 
+    {
+        background-color:red; 
+        transform: rotate(360deg);
+    }
+}
+.content
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* background-color: red; */
+    float: left;
+    
+    outline: 2px solid rgb(0, 0, 0);
+    outline-offset: -2px;
+}
+.noOutline
+{
+    outline: 0px solid rgb(0, 0, 0) !important;
+    outline-offset: 0px;
+}
+
+.container
+{
+    animation-name: rotate;
+    width: 500px;
+    height: 500px;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    /* background-color: rgb(255, 0, 0); */
+}
+.barContainer
+{
+    animation-name: rotate;
+    position: absolute;
+    left: 700px;
+    top: 100px;
+    width: 100px;
+    height: 500px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* background-color: rgb(255, 0, 0); */
+}
+.container2
+{
+    animation-name: rotate;
+    position: absolute;
+    left: 900px;
+    top: 100px;
+    width: 500px;
+    height: 500px;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    /* background-color: rgb(255, 0, 0); */
+}
+@keyframes rotate 
+{
+    0%   
+    {
+        transform: rotate(0deg);
+    }
+    /* 25%  
+    {
+        transform: rotate(90deg);
+    }
+    50%  
+    {
+        transform: rotate(180deg);
+    }
+    75%  
+    {
+        transform: rotate(270deg);
+    } */
+    100% 
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.screenslide1
+{
+    animation-name: screenslide1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes screenslide1 
+{
+    0%   
+    {
+        background-color: rgb(0, 0, 255);
+        top: 0px;
+        left: 0px;
+    }
+    25%  
+    {
+        background-color: rgb(140, 0, 255);
+        top: 700px;
+        left: 0px;
+    }
+    50%  
+    {
+        background-color: rgb(0, 255, 0);
+        top: 700px;
+        left: 1450px;
+    }
+    75%  
+    {
+        background-color: rgb(255, 102, 0);
+        top: 0px;
+        left: 1450px;
+    }
+    100% 
+    {
+        background-color: rgb(0, 0, 255);
+        top: 0px;
+        left: 0px;
+    }
+}
+.screenslide2
+{
+    animation-name: screenslide2;
+    position: absolute;
+    left: 1450px;
+    top: 0px;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes screenslide2 
+{
+    0%   
+    {
+        background-color: rgb(0, 255, 0);
+        top: 0px;
+        left: 1450px;
+    }
+    25%  
+    {
+        background-color: rgb(255, 166, 0);
+        top: 0px;
+        left: 0px;
+    }
+    50%  
+    {
+        background-color: rgb(0, 153, 255);
+        top: 700px;
+        left: 0px;
+    }
+    75%  
+    {
+        background-color: rgb(255, 102, 0);
+        top: 700px;
+        left: 1450px;
+    }
+    100% 
+    {
+        background-color: rgb(0, 255, 0);
+        top: 0px;
+        left: 1450px;
+    }
+}
+.screenslide3
+{
+    animation-name: screenslide3;
+    position: absolute;
+    left: 1450px;
+    top: 0px;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes screenslide3 
+{
+    0%   
+    {
+        background-color: rgb(255, 0, 170);
+        top: 700px;
+        left: 1450px;
+    }
+    25%  
+    {
+        background-color: rgb(255, 196, 0);
+        top: 0px;
+        left: 1450px;
+    }
+    50%  
+    {
+        background-color: rgb(0, 255, 191);
+        top: 0px;
+        left: 0px;
+    }
+    75%  
+    {
+        background-color: rgb(238, 255, 0);
+        top: 700px;
+        left: 0px;
+    }
+    100% 
+    {
+        background-color: rgb(255, 0, 170);
+        top: 700px;
+        left: 1450px;
+    }
+}
+.screenslide4
+{
+    animation-name: screenslide4;
+    position: absolute;
+    left: 1450px;
+    top: 0px;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes screenslide4 
+{
+    0%   
+    {
+        background-color: rgb(255, 230, 0);
+        top: 700px;
+        left: 0px;
+    }
+    25%  
+    {
+        background-color: rgb(255, 0, 55);
+        top: 700px;
+        left: 1450px;
+    }
+    50%  
+    {
+        background-color: rgb(0, 204, 255);
+        top: 0px;
+        left: 1450px;
+    }
+    75%  
+    {
+        background-color: rgb(0, 136, 57);
+        top: 0px;
+        left: 0px;
+    }
+    100% 
+    {
+        background-color: rgb(255, 230, 0);
+        top: 700px;
+        left: 0px;
+    }
+}
+.opacity
+{
+    opacity: 0.7 !important;
+}
+.x100
+{
+    width: 100px;
+    height: 100px;
+}
+.x250
+{
+    width: 250px;
+    height: 250px;
+}
+.qScr
+{
+    width: 14500px;
+    height: 700px;
+}
+.rotate3d
+{
+    animation-name: rotate3d;
+    position: absolute;
+    left: 650px;
+    top: 275px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    background-color: hotpink;
+}
+@keyframes rotate3d 
+{
+    0%   
+    {
+        /* background-color: rgb(255, 230, 0); */
+        transform: rotateY(0deg);
+        transform: rotate(360deg);
+    }
+    /* 25%  
+    {
+        background-color: rgb(255, 0, 55);
+        top: 700px;
+        left: 1450px;
+    }
+    50%  
+    {
+        background-color: rgb(0, 204, 255);
+        top: 0px;
+        left: 1450px;
+    }
+    75%  
+    {
+        background-color: rgb(0, 136, 57);
+        top: 0px;
+        left: 0px;
+    } */
+    100% 
+    {
+        /* background-color: rgb(255, 230, 0); */
+        transform: rotateY(129deg);
+        transform: rotate(0deg);
+    }
+}
