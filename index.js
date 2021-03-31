@@ -1,3 +1,4 @@
+var lastCommand = null;
 function onLoad()
 {
     let input = document.getElementById("CMDinput");
@@ -5,7 +6,7 @@ function onLoad()
     // Execute a function when the user releases a key on the keyboard
     input.addEventListener("keyup", function(event) 
     {
-        // Number 13 is the "Enter" key on the keyboard
+        // printLn("keycode is: " + event.keyCode);   // Number 13 is the "Enter" key on the keyboard
         if (event.keyCode === 13) 
         {
             // Cancel the default action, if needed
@@ -14,9 +15,20 @@ function onLoad()
             document.getElementById("btn").click();
         }
     });
+    input.addEventListener("keyup", function(event) 
+    {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 38) 
+        {
+            if (lastCommand != null)
+            {
+                input.innerHTML = lastCommand;
+            }
+        }
+    });
 
     setInterval(function(){ 
-        input.focus() }, 1500);
+        input.focus() }, 1000);
 }
 function inputgo()
 {
@@ -26,6 +38,7 @@ function inputgo()
     console.log(consoleElm);
 
     var input = document.getElementById("CMDinput");
+    lastCommand = input.innerHTML;
     printLn("H:/Home> " + input.innerHTML);
     if(input.innerHTML != "")
     {
@@ -46,6 +59,13 @@ function inputgo()
             else
             {
                 printHeadder("WebUI Console Help");
+                printLn("Welcome to the WebUI console. Here is a list of commands supported by the current version.");
+                printBr();
+                printHeadder2("**SUPPORTED COMMANDS**");
+                printLn("animation test: runs an animation web app");
+                // printLn("   --redirect: redivects the current page to animationTest.webapp");
+                // printLn("   --newtab: opens animationTest in a new browser tab");
+                printBr();
             }
         }
         else if (input.innerHTML.search("animation test") == 0)
