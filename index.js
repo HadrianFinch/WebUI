@@ -27,8 +27,10 @@ function onLoad()
         }
     });
 
-    setInterval(function(){ 
-        input.focus() }, 1000);
+    setInterval(function()
+    { 
+    input.focus()}, 1000);
+    
 }
 function inputgo()
 {
@@ -62,8 +64,8 @@ function inputgo()
                 printLn("Welcome to the WebUI console. Here is a list of commands supported by the current version.");
                 printBr();
                 printHeadder2("**SUPPORTED COMMANDS**");
-                printLn("animation test: runs an animation web app");
-                // printLn("   --redirect: redivects the current page to animationTest.webapp");
+                printLn("   animation test : runs an animation web app");
+                printLn("   ls : lists files in the current directory");
                 // printLn("   --newtab: opens animationTest in a new browser tab");
                 printBr();
             }
@@ -106,6 +108,29 @@ function inputgo()
             {
                 printLn("animationTest.webapp launched sucessfully");
             }
+            else
+            {
+
+            }
+            
+        }
+        else if (input.innerHTML.search("ls") == 0 ||
+                 input.innerHTML.search("dir") == 0)
+        {
+            input.innerHTML = "";
+            printLn("Current Directory is: " + document.getElementsByClassName("inputbar")[0].innerHTML);
+            printHeadder2("subdirectorys:");
+            printLnBlue("There are no subdirectories.");
+            printBr();
+            printHeadder2("Files");
+            printLnBlue("animation test")
+        }
+        else if (input.innerHTML.search("teams open") == 0 ||
+                 input.innerHTML.search("teams /o") == 0)
+        {
+            printLn("opening in teams...");
+            var popup = window.open("https://teams.microsoft.com/share?href=https%3A%2F%2Fhadrianfinch.github.io%2FWebUI%2F", "", 
+                "width=650, height=700");
         }
     }
 
@@ -117,6 +142,22 @@ function printLn(textToPrint)
     var consoleElm = document.getElementById("console");
     var output = document.createElement("p");
     output.innerHTML = textToPrint;
+    consoleElm.appendChild(output);
+}
+function printLnBlue(textToPrint)
+{
+    var consoleElm = document.getElementById("console");
+    var output = document.createElement("p");
+    output.innerHTML = textToPrint;
+    output.classList = "bluetext";
+    consoleElm.appendChild(output);
+}
+function printLnRed(textToPrint)
+{
+    var consoleElm = document.getElementById("console");
+    var output = document.createElement("p");
+    output.innerHTML = textToPrint;
+    output.classList = "redtext";
     consoleElm.appendChild(output);
 }
 function printBr()

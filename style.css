@@ -27,6 +27,7 @@ body
 {
     overflow: hidden;
 }
+
 .okBtn
 {
     width: 40px;
@@ -440,4 +441,12 @@ body
         /* transform: rotateY(129deg); */
         transform: rotate(360deg);
     }
+}
+.bluetext
+{
+    color: deepskyblue;
+}
+.redtext
+{
+    color: red;
 }
