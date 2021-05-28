@@ -126,7 +126,9 @@ function inputgo()
             printLnBlue("animation test")
         }
         else if (input.innerHTML.search("teams open") == 0 ||
-                 input.innerHTML.search("teams /o") == 0)
+            input.innerHTML.search("teams /o") == 0 || 
+            input.innerHTML.search("teams share") == 0 ||
+            input.innerHTML.search("teams /s") == 0)
         {
             printLn("opening in teams...");
             var popup = window.open("https://teams.microsoft.com/share?href=https%3A%2F%2Fhadrianfinch.github.io%2FWebUI%2F", "", 
